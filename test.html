@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    .navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0.5rem;
+    width: 200px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-icon {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+    
+    .navbar-container {
+        padding: 0 1rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="Store Logo">
+            
+            </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/deals">Deals</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- User Actions -->
+        <div class="nav-actions">
+            <a href="/account" class="nav-icon">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="/cart" class="nav-icon cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+    
+</body>
+</html>
+
